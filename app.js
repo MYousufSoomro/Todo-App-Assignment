@@ -1,6 +1,7 @@
 //TODO APPLICATION
 var inp = document.getElementById("inp");
 var ul = document.getElementById("items");
+var delAllBtn = document.getElementById("delAllBtn");
 
 inp.focus();
 var todoList = [];
@@ -17,6 +18,13 @@ function addTodo() {
 
 function render() {
   ul.innerHTML = "";
+
+  if (todoList.length !== 0) {
+    delAllBtn.style.display = "block";
+  } else {
+    delAllBtn.style.display = "none";
+  }
+
   for (var i = 0; i < todoList.length; i++) {
     ul.innerHTML += `
     <li id="todoItem${i}" class="list-group-item d-flex justify-content-between align-items-center">

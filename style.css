@@ -33,3 +33,7 @@
 .user-no-select {
   user-select: none;
 }
+
+#delAllBtn {
+  display: none;
+}
